@@ -1,0 +1,9 @@
+.btn {
+    color: white;
+    background-color:crimson ;
+    border-radius: 5px;
+}
+
+header {
+    display: flex;
+}
