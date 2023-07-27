@@ -15,6 +15,9 @@ html {
     background-image:url(movie\ background.jpg);
 }
 
+.hide {
+    display: none;
+}
 /* align title/header and nav links inline */
 
 
