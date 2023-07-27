@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    
+    <link rel="stylesheet" href="./assets/reset.css"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
     <link rel="stylesheet" href="./assets/reset.css"/>
     <link rel="stylesheet" href="./assets/style.css" />
+  
     <title>Watch This!</title>
 </head>
 
@@ -22,8 +24,10 @@
                 <li><a href='#'>Placeholder</a></li>
             </ul>
     </header>
+
+
     <main>
-        <div class="jumbotron hide" id="movie-quiz">
+        <div class="jumbotron hide" id="homepage">
             <h2 class="quiz-title">Movie Questionaire</h2>
             <div class="quiz-comments">
                 <p>It can be difficult and take up too much time to find a movie to watch</p>
@@ -32,7 +36,61 @@
             </div>
             <button class="btn" type="button" id="start-button">Start Questions</button>
         </div>
+
+<!-- In JS create question selections -->
+        <section class="conatiner">
+            <div class="hide" id="question-1">
+                <h2>Question 1</h2>
+                <button class="btn back-button">Back</button>
+                <button class="btn next-button">Next Question</button>
+            </div>
+
+            <div class="hide" id="question-2">
+                <h2>Question 2</h2>
+                <button class="btn back-button">Back</button>
+                <button class="btn next-button">Next Question</button>
+            </div>
+
+            <div class="hide" id="question-3">
+                <h2>Question 3</h2>
+                <button class="btn back-button">Back</button>
+                <button class="btn next-button">Next Question</button>
+            </div>
+
+            <div class="hide" id="question-4">
+                <h2>Question 4</h2>
+                <button class="btn back-button">Back</button>
+                <button class="btn next-button">Next Question</button>
+            </div>
+
+            <div class="hide" id="question-5">
+                <h2>Question 5</h2>
+                <button class="btn back-button">Back</button>
+                <button class="btn next-button">Next Question</button>
+            </div>
+
+            <!-- create card element in JS for recommended movies -->
+            <div class="recommended">
+                <!-- Image of recommended movie shows up -->
+                <img src="https://">
+
+                <!-- Trailer button goes to youtube -->
+                <button class="btn">Trailer</button>
+
+                <!-- When clicked, movie function runs again -->
+                <button class="btn">New Recommendation</button>
+
+                <!-- Website(s) where the movie can be watched -->
+                <button class="btn">Watch on: </button>
+            </div>
+
+
+        </section>
+
     </main>
+
+
 </body>
 <script src="./assets/script.js"></script>
+
 </html>
