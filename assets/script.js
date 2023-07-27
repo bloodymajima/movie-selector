@@ -6,6 +6,8 @@ const startButton = document.getElementById('start-button')
 
 const previousQuestionButton = document.getElementById('back-button')
 
+const questionContainer = document.getElementById('questions')
+
 const nextQuestionButton = document.getElementById('next-button')
 
 const questionOne = document.getElementById('question-1')
@@ -28,9 +30,7 @@ const streamingOnButton = document.getElementById('watch-on')
 
 const restartQuiz = document.getElementById('start-over')
 
-
-
-
+homePage.classList.remove('hide')
 
 //How to define variables using jQuery?
 
