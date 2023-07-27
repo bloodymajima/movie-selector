@@ -1,9 +1,21 @@
 .btn {
-    color: white;
-    background-color:crimson ;
+    color: rgb(50, 103, 201);
+    background-color:rgb(240, 236, 237) ;
     border-radius: 5px;
 }
 
 header {
     display: flex;
+    
+    color: rgb(50, 103, 201);
 }
+
+/* add background image */
+html {
+    background-image:url(movie\ background.jpg);
+}
+
+/* align title/header and nav links inline */
+
+
+/* add font color */
