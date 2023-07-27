@@ -7,3 +7,13 @@
 header {
     display: flex;
 }
+
+/* add background image */
+html {
+    background-image:url(movie\ background.jpg);
+}
+
+/* align title/header and nav links inline */
+
+
+/* add font color */
