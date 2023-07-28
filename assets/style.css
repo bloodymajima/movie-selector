@@ -9,7 +9,16 @@ header {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-width: 85%;
+width: 60%;
+font-weight: bold;
+}
+
+.nav-links {
+    /* display: flex;
+    flex-direction: row;
+    width: 60%;
+   justify-content: right;
+    */
 }
 
 
@@ -27,7 +36,7 @@ h1 {
 }
 /* add background image */
 html {
-    background-image: url(movie\ background.jpg);
+    background-image: url(pexels-donald-tong-66134.jpg);
 }
 
 /* Edit "movie questionaire" - quiz-title */
@@ -73,3 +82,5 @@ ul {
     text-align: center;
     color: rgb(50, 103, 201);
 }
+
+/* add scroll bar */
