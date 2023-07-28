@@ -22,3 +22,12 @@ html {
 
 
 /* add font color */
+
+#homepage,
+#questions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}

@@ -1,5 +1,32 @@
 // Variables
 
+var questions = [
+    {
+        question: "What is your mood today?",
+        answer: "Happy" || "Neutral" || "Sad",
+        choices: ["Happy", "Neutral", "Sad"]
+    },
+    {
+        question: "Question 2",
+        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+    },
+    {
+        question: "Question 3",
+        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+    },
+    {
+        question: "Question 4",
+        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+    },
+    {
+        question: "Question 5",
+        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+    }
+
+]
+
+const count = 0
+
 const homePage = document.getElementById('homepage')
 
 const startButton = document.getElementById('start-button')
@@ -31,6 +58,27 @@ const streamingOnButton = document.getElementById('watch-on')
 const restartQuiz = document.getElementById('start-over')
 
 homePage.classList.remove('hide')
+
+startButton.addEventListener('click', startQ)
+
+function startQ() {
+    homePage.classList.add('hide')
+    questionContainer.classList.remove('hide')
+    showQ()
+}
+
+function showQ() {
+    questionContainer.innerHTML = ""
+    var question = document.createElement("h2");
+    question.innerHTML = questions[count].question;
+    questionContainer.append(question)
+    for (var i = 0; i < questions[count].choices.length; i++) {
+        var button = document.createElement("button")
+        button.textContent = questions[count].choices[i]
+        button.value = questions[count].choices[i]
+        questionContainer.append(button)
+    }
+}
 
 //How to define variables using jQuery?
 
