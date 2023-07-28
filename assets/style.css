@@ -13,12 +13,10 @@ width: 60%;
 font-weight: bold;
 }
 
-.nav-links {
-    /* display: flex;
-    flex-direction: row;
-    width: 60%;
-   justify-content: right;
-    */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 
@@ -71,7 +69,7 @@ ul {
     flex-direction: row;
     list-style: none;
     justify-content: space-between;
-    width: 100%;
+    width: 400px;
     text-decoration: underline;
     color: rgb(50, 103, 201);
     line-height: 50pt;
