@@ -1,21 +1,75 @@
 .btn {
     color: rgb(50, 103, 201);
-    background-color:rgb(240, 236, 237) ;
+    background-color: rgb(240, 236, 237);
     border-radius: 5px;
 }
 
+/* align h1  and fix font */
 header {
-    display: flex;
-    
-    color: rgb(50, 103, 201);
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 85%;
 }
 
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(50, 103, 201);
+    
+}
+#title {
+    font-size: 20pt;
+}
 /* add background image */
 html {
-    background-image:url(movie\ background.jpg);
+    background-image: url(movie\ background.jpg);
 }
 
-/* align title/header and nav links inline */
+/* Edit "movie questionaire" - quiz-title */
+.quiz-title {
+    text-decoration: underline;
+}
 
+/* Edit start question button */
+#start-button {
+   border-radius: 5px;
+   background-color: rgb(50, 103, 201);
+   color: rgb(240, 236, 237);
+}
 
-/* add font color */
+/* fix border */
+#homepage {
+    color: rgb(50, 103, 201);
+    background-color: rgb(240, 236, 237);
+    width: 450px;
+    border-style: groove;
+    padding: 50px;
+    border-width: 20px;
+    border-color: rgb(50, 103, 201);
+    text-align: center;
+    margin: auto;
+    line-height: 20pt;
+}
+
+/* align title/header and nav links*/
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: underline;
+    color: rgb(50, 103, 201);
+    line-height: 50pt;
+}
+
+/* center all buttons */
+.hide {
+    text-align: center;
+    color: rgb(50, 103, 201);
+}
