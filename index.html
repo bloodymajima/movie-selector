@@ -31,18 +31,22 @@
 
     <main>
 
-        <div class="jumbotron hide" id="homepage">
+        <div class="jumbotron hide text-white" id="homepage">
             <h2 class="quiz-title">Movie Questionaire</h2>
             <div class="quiz-comments">
                 <p>It can be difficult and take up too much time to find a movie to watch</p>
                 <p>This website is designed recommend movies based off of your answers</p>
                 <p>Take this quick questionaire, so we can help find you a movie!</p>
             </div>
-            <button class="btn" type="button" id="start-button">Start Questions</button>
+            <button class="btn hover:bg-blue-700" type="button" id="start-button">Start Questions</button>
         </div>
 
-        <!-- In JS create question selections -->
-        <section class="container" id="questions">
+        <section class="col-12 hide text-white" id="questions">
+            <button class="btn hover:bg-blue-700 back-button" >Back</button>
+                <button class="btn hover:bg-blue-700 next-button" >Next Question</button>
+
+         <!-- In JS create question selections -->
+        <!-- <section class="container" id="questions">
             <div class="hide" id="question-1">
                 <h2>Question 1</h2>
                 <button class="btn back-button" >Back</button>
@@ -71,7 +75,7 @@
                 <h2>Question 5</h2>
                 <button class="btn back-button" >Back</button>
                 <button class="btn next-button">Next Question</button>
-            </div>
+            </div>  -->
 
             <!-- create card element in JS for recommended movies -->
             <div class="recommended hide" id="recommended">
