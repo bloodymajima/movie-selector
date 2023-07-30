@@ -288,9 +288,6 @@ homePage.classList.remove('hide')
 
 const userAnswers = [];
 
-
-const startButton = document.getElementById('start-button')
-
 let count = 0;
 
 function startQ() {
