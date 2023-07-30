@@ -1,83 +1,330 @@
 // Variables
+const randomNumber = Math.floor(Math.random()* 566)
+const movieDBAPI = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page='+randomNumber+'&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&apiKey=51460ea6e050952a835f989f5534065e'
+console.log(randomNumber);
+fetch(movieDBAPI, {
+    headers: {
+        Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1MTQ2MGVhNmUwNTA5NTJhODM1Zjk4OWY1NTM0MDY1ZSIsInN1YiI6IjY0YzQ1ZjA3ZWMwYzU4MDBlODBiMzZhZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8YQ-iktr5Z81LBFOrqWmbmt1O82PsVJk8qXLAvZx72I'
+    }
+}).then((response)=>{
+    return response.json()
+}).then((data)=>{
+    const randomMovie = data.results[Math.floor(Math.random()* data.results.length)]
+    console.log(randomMovie);
 
-var questions = [
+})
+
+const urlforposter = 'http://image.tmdb.org/t/p/w500/'
+
+const homePage = document.querySelector('#homepage');
+
+const startButton = document.querySelector('#start-button');
+
+const previousQuestionButton = document.querySelector('.back-button');
+
+const nextQuestionButton = document.querySelector('.next-button');
+
+const questionContainer = document.querySelector('#questions');
+
+const answersContainer = document.querySelector('#answers');
+
+const questionEle = document.querySelector('#question');
+
+// const questionOne = document.getElementById('question-1')
+
+// const questionTwo = document.getElementById('question-2')
+
+// const questionThree = document.getElementById('question-3')
+
+// const questionFour = document.getElementById('question-4')
+
+// const questionFive = document.getElementById('question-5')
+
+const recContainer = document.querySelector('#recommended');
+
+const trailerButton = document.querySelector('#trailer');
+
+const newRecButton = document.querySelector('#new-rec');
+
+const streamingOnButton = document.querySelector('#watch-on');
+
+const restartQuiz = document.querySelector('#start-over');
+
+const questions = [
     {
         question: "What is your mood today?",
-        answer: "Happy" || "Neutral" || "Sad",
-        choices: ["Happy", "Neutral", "Sad"]
+        shortName: "mood",
+        answers: [
+            {
+               label: "Happy",
+               value: "happy"
+             },
+            {
+                label: "Neutral",
+                value: "neutral"
+            },
+            {
+                label: "Sad",
+                value: "sad"
+            }
+        ]
     },
     {
-        question: "Question 2",
-        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+        question: "Choose a genre",
+        shortName: "genre",
+        answers: [
+            {
+               label: "Action",
+               value: "action"
+             },
+            {
+                label: "Comedy",
+                value: "comedy"
+            },
+            {
+                label: "Drama",
+                value: "drama"
+            },
+            {
+                label: "Adventure",
+                value: "adventure"
+            },
+            {
+                label: "Thriller",
+                value: "thriller"
+            },
+            {
+                label: "Crime",
+                value: "crime"
+            },
+            {
+                label: "Romance",
+                value: "romance"
+            },
+            {
+                label: "Science Fiction",
+                value: "science fiction"
+            },
+            {
+                label: "Fantasy",
+                value: "fantasy"
+            },
+            {
+                label: "Family",
+                value: "family"
+            },
+            {
+                label: "Mystery",
+                value: "mystery"
+            },
+            {
+                label: "Biography",
+                value: "biography"
+            },
+            {
+                label: "History",
+                value: "history"
+            },
+            {
+                label: "Animation",
+                value: "animation"
+            },
+            {
+                label: "Music",
+                value: "music"
+            },
+            {
+                label: "Sport",
+                value: "sport"
+            },
+            {
+                label: "Disaster",
+                value: "disaster"
+            },
+            {
+                label: "Western",
+                value: "western"
+            },
+            {
+                label: "War",
+                value: "war"
+            },
+            {
+                label: "Horror",
+                value: "horror"
+            },
+        ]
     },
     {
-        question: "Question 3",
-        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+        question: "How old would you like the movie to be?",
+        shortName: "movie age",
+        answers: [
+            {
+               label: "Doesn't matter",
+               value: "N/A"
+             },
+            {
+                label: "Published in the last 3 years",
+                value: "> 3 years"
+            },
+            {
+                label: "Published in the last 5 years",
+                value: "> 5 years"
+            },
+            {
+                label: "Published in the last 10 years",
+                value: "> 10 years"
+            },
+            {
+                label: "Published in the last 20 years",
+                value: "> 20 years"
+            },
+        ]
     },
     {
-        question: "Question 4",
-        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+        question: "Choose a rating for your movie",
+        shortName: "rating",
+        answers : [
+            {
+               label: "Doesn't matter",
+               value: "N/A"
+             },
+            {
+                label: "Rated-G",
+                value: "G"
+            },
+            {
+                label: "Rated-PG",
+                value: "PG"
+            },
+            {
+                label: "Rated PG-13",
+                value: "> 10 years"
+            },
+            {
+                label: "Rated R",
+                value: "> 20 years"
+            },
+        ]
     },
     {
-        question: "Question 5",
-        choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+        question: "Other catergories for your movie",
+        shortName: "other",
+        answers: [
+            {
+               label: "No preference",
+               value: "N/A"
+             },
+            {
+                label: "Based on a true story",
+                value: "true story"
+            },
+            {
+                label: "Set in New York City",
+                value: "nyc"
+            },
+            {
+                label: "Set in Las Vegas",
+                value: "las vegas"
+            },
+            {
+                label: "Space Movies",
+                value: "space"
+            },
+            {
+                label: "Based on a book",
+                value: "book"
+            },
+            {
+                label: "Spy and Cop movies",
+                value: "spy cop"
+            },
+            {
+                label: "Involves a wedding",
+                value: "wedding"
+            },
+            {
+                label: "Racing movies",
+                value: "racing"
+            },
+            {
+                label: "IMDb Top 250 Movies",
+                value: "top 250"
+            },
+        ]
     }
-
 ]
 
-const count = 0
+homePage.classList.remove('hide');
+previousQuestionButton.classList.add('hide');
+nextQuestionButton.classList.add('hide');
 
-const homePage = document.getElementById('homepage')
+startButton.addEventListener('click', startQ, showQ);
 
-const startButton = document.getElementById('start-button')
+const userAnswers = [];
 
-const previousQuestionButton = document.getElementById('back-button')
-
-const questionContainer = document.getElementById('questions')
-
-const nextQuestionButton = document.getElementById('next-button')
-
-const questionOne = document.getElementById('question-1')
-
-const questionTwo = document.getElementById('question-2')
-
-const questionThree = document.getElementById('question-3')
-
-const questionFour = document.getElementById('question-4')
-
-const questionFive = document.getElementById('question-5')
-
-const recContainer = document.getElementById('recommended')
-
-const trailerButton = document.getElementById('trailer')
-
-const newRecButton = document.getElementById('new-rec')
-
-const streamingOnButton = document.getElementById('watch-on')
-
-const restartQuiz = document.getElementById('start-over')
-
-homePage.classList.remove('hide')
-
-startButton.addEventListener('click', startQ)
+let count = 0;
 
 function startQ() {
-    homePage.classList.add('hide')
-    questionContainer.classList.remove('hide')
-    showQ()
+    homePage.classList.add('hide');
+    questionContainer.classList.remove('hide');
+    previousQuestionButton.classList.remove('hide');
+    nextQuestionButton.classList.remove('hide');
+    showQ();
 }
 
 function showQ() {
-    questionContainer.innerHTML = ""
-    var question = document.createElement("h2");
-    question.innerHTML = questions[count].question;
-    questionContainer.append(question)
-    for (var i = 0; i < questions[count].choices.length; i++) {
-        var button = document.createElement("button")
-        button.textContent = questions[count].choices[i]
-        button.value = questions[count].choices[i]
-        questionContainer.append(button)
+    questionContainer.textContent = "";
+    answersContainer.innerHTML = "";
+    const currentQuestion = questions[count];
+    questionContainer.textContent = currentQuestion.question;
+    for (var j = 0; j < currentQuestion.answers.length; j++) {
+        const listItem = document.createElement("li");
+        const label = document.createElement("label");
+        label.textContent = currentQuestion.answers[j].label;
+        const check = document.createElement("input");
+        check.setAttribute("type", "checkbox");
+        check.setAttribute("value", currentQuestion.answers[j].value);
+        check.setAttribute("data-shortName", currentQuestion.shortName);
+        label.appendChild(check);
+        listItem.appendChild(label);
+        answersContainer.appendChild(listItem);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (count === questions.length - 1) {
+      console.log(userAnswers);
+      return;
     }
+    count++;
+    showQ();
+  }
+  
+  function handleClick(e) {
+    const target = e.target;
+    const answer = target.value;
+    const shortName = target.getAttribute("data-shortName");
+    userAnswers.push({
+      shortName: shortName,
+      answer: answer
+    });
+  }
+  
+  nextQuestionButton.addEventListener("click", handleSubmit);
+  answersContainer.addEventListener("click", handleClick);
+
+//   startButton.addEventListener('click', showQ);
+
+    // var question = document.createElement("h2");
+    // question.innerHTML = questionContainer[count].question;
+    // questionContainer.append(question)
+    // for (var i = 0; i < questions[count].choices.length; i++) {
+    //     var button = document.createElement("button")
+    //     button.textContent = questions[count].choices[i]
+    //     button.value = questions[count].choices[i]
+    //     questionContainer.append(button)
+    // }
 }
 
 //How to define variables using jQuery?
