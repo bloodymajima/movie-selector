@@ -7,8 +7,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/reset.css" />
-    <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/style2.css" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
     <title class="text-white">Watch This!</title>
@@ -17,12 +17,24 @@
 <body>
     <header>
         <h1>Watch This!</h1>
-        
-        <nav >
-
-            <ul>
-                <li><a href='#'>Genres</a></li>
-                <li><a href='#movie-quiz'>Movie Quiz</a></li>
+                
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropdownBtn">Genres</button>
+                    <div id="dropdownMenu" class="dropdown-content">
+                      <a href="./genre-htmls/comedy.html">Comedy</a>
+                      <a href="./genre-htmls/action.html">Action</a>
+                      <a href="./genre-htmls/adventure.html">Adventure</a>
+                      <a href="./genre-htmls/drama.html">Drama</a>
+                      <a href="./genre-htmls/horror.html">Horror</a>
+                      <a href="./genre-htmls/romance.html">Romance</a>
+                      <a href="./genre-htmls/sci-fi.html">Science Fiction</a>
+                      <a href="./genre-htmls/thriller.html">Thriller</a>
+                    </div>
+                  </div>
+                  
+<nav>
+    <ul>
+                <li><a href='./index.html'>Movie Quiz</a></li>
                 <li><a href='#'>Placeholder</a></li>
             </ul>
         </nav>
