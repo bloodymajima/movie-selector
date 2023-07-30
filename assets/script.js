@@ -261,7 +261,7 @@ nextQuestionButton.classList.add('hide');
 
 startButton.addEventListener('click', startQ, showQ);
 
-const userAnswers = [];
+const startButton = document.getElementById('start-button')
 
 let count = 0;
 
