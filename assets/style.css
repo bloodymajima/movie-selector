@@ -81,4 +81,22 @@ ul {
     color: rgb(50, 103, 201);
 }
 
+
 /* add scroll bar */
+
+.hide {
+    display: none;
+}
+/* align title/header and nav links inline */
+
+
+/* add font color */
+
+#homepage,
+#questions {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
