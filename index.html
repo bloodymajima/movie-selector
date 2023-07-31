@@ -16,15 +16,15 @@
 
 <body>
     <header>
-        <h1 class="flex flex:row text-5xl text-white">Watch This!</h1>
+        <h1 class="my-2 text-4xl text-white">Watch This!</h1>
 
         <nav>
-            <ul class="text-3xl text-white">
+            <ul class="text-2xl text-white">
                 <div class="dropdown">
                     <li class="lg:inline-block">
-                        <button onclick="myFunction()" class="dropdownBtn text-3xl mx-2">Genres</button>
+                        <button onclick="myFunction()" class="dropdownBtn text-2xl mx-2">Genres</button>
                     </li>
-                    <div id="dropdownMenu" class="dropdown-content">
+                    <div id="dropdownMenu" class="text-lg dropdown-content">
                         <a href="./genre-htmls/comedy.html">Comedy</a>
                         <a href="./genre-htmls/action.html">Action</a>
                         <a href="./genre-htmls/adventure.html">Adventure</a>
@@ -45,19 +45,19 @@
 
     <main>
 
-        <div class="jumbotron hide text-white text-2xl" id="homepage">
-            <h2 class="text-3xl quiz-title">Movie Questionaire</h2>
+        <div class="jumbotron hide text-white text-3xl" id="homepage">
+            <h2 class="text-5xl quiz-title font-bold">Movie Questionaire</h2>
             <div class="quiz-comments">
-                <p>It can be difficult and take up too much time to find a movie to watch</p>
-                <p>This website is designed recommend movies based off of your answers</p>
-                <p>Take this quick questionaire, so we can help find you a movie!</p>
+                <p class="text-lg">It can be difficult and take up too much time to find a movie to watch</p>
+                <p class="text-lg">This website is designed recommend movies based off of your answers</p>
+                <p class="text-lg">Take this quick questionaire, so we can help find you a movie!</p>
             </div>
-            <button class="btn hover:bg-blue-700" type="button" id="start-button">Start Questions</button>
+            <button class="btn hover:bg-blue-700 my-1" type="button" id="start-button">Start Questions</button>
         </div>
 
         <section class="col-12 hide text-white text-2xl" id="questions">
-            <button class="btn hover:bg-blue-700 back-button">Back</button>
-            <button class="btn hover:bg-blue-700 next-button">Next Question</button>
+            <button class="btn hover:bg-blue-700 back-button my-1">Back</button>
+            <button class="btn hover:bg-blue-700 next-button my-1">Next Question</button>
 
             <!-- In JS create question selections -->
             <!-- <section class="container" id="questions">
