@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/reset.css" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/style2.css" />
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>Top Romance Movies - Watch This!</title>
 </head>
 <body>
+  <header>
+    <h1 class="my-2 text-4xl text-white">Watch This!</h1>
+
+    <nav>
+        <ul class="text-2xl text-white">
+            <div class="dropdown">
+                <li class="lg:inline-block">
+                    <button onclick="myFunction()" class="dropdownBtn text-2xl mx-2">Genres</button>
+                </li>
+                <div id="dropdownMenu" class="text-lg dropdown-content">
+                    <a href="./comedy.html">Comedy</a>
+                    <a href="./action.html">Action</a>
+                    <a href="./adventure.html">Adventure</a>
+                    <a href="./drama.html">Drama</a>
+                    <a href="./horror.html">Horror</a>
+                    <a href="./romance.html">Romance</a>
+                    <a href="./sci-fi.html">Science Fiction</a>
+                    <a href="./thriller.html">Thriller</a>
+                </div>
+            </div>
+
+            <li class="lg:inline-block mx-2"><a href='../index.html'>Movie Quiz</a></li>
+            <li class="lg:inline-block mx-2"><a href='#'>Placeholder</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
     
+    </main>
 </body>
+<script src="../assets/script.js"></script>
+<script src="https://imdb-api.com/en/API/SearchMovie/k_12345678/"></script>
+<script src="https://api.trakt.tv"></script>
+<script src="https://api.watchmode.com/v1/status/?apiKey=aeGhhIfqrz2g21fWqBTob5FoPvEFlMVmhNF2qPgC"></script>
 </html>
