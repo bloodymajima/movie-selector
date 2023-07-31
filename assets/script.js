@@ -1,29 +1,29 @@
 // Variables
 
-var questions = [
-  {
-    question: "1. What is your mood today?",
-    answer: "Happy" || "Neautral" || "Sad",
-    choices: ["Happy", "Neutral", "Sad"]
-  },
-  {
-    question: "2. Question 2",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-  },
-  {
-    question: "3. Question 3",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-  },
-  {
-    question: "4. Question 4",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-  },
-  {
-    question: "5. Question 5",
-    choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-  }
+// var questions = [
+//   {
+//     question: "1. What is your mood today?",
+//     answer: "Happy" || "Neautral" || "Sad",
+//     choices: ["Happy", "Neutral", "Sad"]
+//   },
+//   {
+//     question: "2. Question 2",
+//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+//   },
+//   {
+//     question: "3. Question 3",
+//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+//   },
+//   {
+//     question: "4. Question 4",
+//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+//   },
+//   {
+//     question: "5. Question 5",
+//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
+//   }
 
-]
+// ]
 
 const count = 0
 
@@ -88,18 +88,18 @@ startButton.addEventListener('click', showQ)
 //     showQ()
 // }
 
-function showQ() {
-  questionContainer.innerHTML = ""
-  var question = document.createElement("h2");
-  question.innerHTML = questions[count].question;
-  questionContainer.append(question)
-  for (var i = 0; i < questions[count].choices.length; i++) {
-    var button = document.createElement("button")
-    button.textContent = questions[count].choices[i]
-    button.value = questions[count].choices[i]
-    questionContainer.append(button)
-  }
-}
+// function showQ() {
+//   questionContainer.innerHTML = ""
+//   var question = document.createElement("h2");
+//   question.innerHTML = questions[count].question;
+//   questionContainer.append(question)
+//   for (var i = 0; i < questions[count].choices.length; i++) {
+//     var button = document.createElement("button")
+//     button.textContent = questions[count].choices[i]
+//     button.value = questions[count].choices[i]
+//     questionContainer.append(button)
+//   }
+// }
 
 
 //How to define variables using jQuery?
