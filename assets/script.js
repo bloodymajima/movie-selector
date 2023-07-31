@@ -15,8 +15,10 @@ fetch(movieDBAPI, {
 
 })
 
+const urlForPoster = 'http://image.tmdb.org/t/p/w500/'
+
 const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
-// +'&apiKey=1'+'/images/media/drink/vrwquq1478252802.jpg/preview'
+
 console.log(randomNumber);
 fetch(drinkDBAPI, {
     }).then((response)=>{
@@ -42,7 +44,7 @@ const questionContainer = document.querySelector('#questions');
 
 const answersContainer = document.querySelector('#answers');
 
-const questionEle = document.querySelector('#question');
+const questionEl = document.querySelector('#question');
 
 const recContainer = document.querySelector('#recommended');
 
@@ -56,7 +58,7 @@ const restartQuiz = document.querySelector('#start-over');
 
 const questions = [
     {
-        question: "What is your mood today?",
+        question: "1. What is your mood today?",
         shortName: "mood",
         answers: [
             {
@@ -74,7 +76,7 @@ const questions = [
         ]
     },
     {
-        question: "Choose a genre",
+        question: "2. Choose a genre",
         shortName: "genre",
         answers: [
             {
@@ -160,7 +162,7 @@ const questions = [
         ]
     },
     {
-        question: "How old would you like the movie to be?",
+        question: "3. How old would you like the movie to be?",
         shortName: "movie age",
         answers: [
             {
@@ -186,7 +188,7 @@ const questions = [
         ]
     },
     {
-        question: "Choose a rating for your movie",
+        question: "4. Choose a rating for your movie",
         shortName: "rating",
         answers : [
             {
@@ -212,7 +214,7 @@ const questions = [
         ]
     },
     {
-        question: "Other catergories for your movie",
+        question: "5. Other catergories for your movie",
         shortName: "other",
         answers: [
             {
