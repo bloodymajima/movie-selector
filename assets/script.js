@@ -1,27 +1,4 @@
-// Variable
-
-// var questions = [
-//   {
-//     question: "1. What is your mood today?",
-//     answer: "Happy" || "Neautral" || "Sad",
-//     choices: ["Happy", "Neutral", "Sad"]
-//   },
-//   {
-//     question: "2. Question 2",
-//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-//   },
-//   {
-//     question: "3. Question 3",
-//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-//   },
-//   {
-//     question: "4. Question 4",
-//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-//   },
-//   {
-//     question: "5. Question 5",
-//     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
-//   }
+// Variables
 
 const randomNumber = Math.floor(Math.random()* 566)
 const movieDBAPI = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page='+randomNumber+'&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&apiKey=51460ea6e050952a835f989f5534065e'
@@ -39,6 +16,19 @@ fetch(movieDBAPI, {
 })
 
 const urlForPoster = 'http://image.tmdb.org/t/p/w500/'
+const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'+'&apiKey=1'+'/images/media/drink/vrwquq1478252802.jpg/preview'
+console.log(randomNumber);
+fetch(drinkDBAPI, {
+    }).then((response)=>{
+        return response.json()
+    }).then((data)=>{
+        const randomDrink = data.results[Math.floor(Math.random()* data.results)]
+        console.log(randomDrink);
+
+    });
+
+
+const urlforposter = 'http://image.tmdb.org/t/p/w500/'
 
 const homePage = document.querySelector('#homepage');
 
@@ -53,16 +43,6 @@ const questionContainer = document.querySelector('#questions');
 const answersContainer = document.querySelector('#answers');
 
 const questionEl = document.querySelector('#question');
-
-// const questionOne = document.getElementById('question-1')
-
-// const questionTwo = document.getElementById('question-2')
-
-// const questionThree = document.getElementById('question-3')
-
-// const questionFour = document.getElementById('question-4')
-
-// const questionFive = document.getElementById('question-5')
 
 const recContainer = document.querySelector('#recommended');
 
@@ -305,6 +285,9 @@ window.onclick = function (event) {
 }
 
 
+
+startButton.addEventListener('click', showQ)
+
 const userAnswers = [];
 
 let count = 0;
@@ -358,24 +341,22 @@ function showQ() {
   nextQuestionButton.addEventListener("click", handleSubmit);
   answersContainer.addEventListener("click", handleClick);
 
-  startButton.addEventListener('click', showQ);
-
-    var question = document.createElement("h2");
-    question.innerHTML = questionContainer[count].question;
-    questionContainer.append(question)
-    for (var i = 0; i < questions[count].choices.length; i++) {
-        var button = document.createElement("button")
-        button.textContent = questions[count].choices[i]
-        button.value = questions[count].choices[i]
-        questionContainer.append(button)
-    }
+    // var question = document.createElement("h2");
+    // question.innerHTML = questionContainer[count].question;
+    // questionContainer.append(question)
+    // for (var i = 0; i < questions[count].choices.length; i++) {
+    //     var button = document.createElement("button")
+    //     button.textContent = questions[count].choices[i]
+    //     button.value = questions[count].choices[i]
+    //     questionContainer.append(button)
+    // }
 }
 
-//How to define variables using jQuery?
+//How to define variables using jQuery? DONE
 
-// When a question shows up, hide class is added for previous question, removed for current
+// When a question shows up, hide class is added for previous question, removed for current NOT WORKING
 
-// Input from questions goes into function for selecting movies
+// Input from questions goes into function for selecting movies NOT WORKING
 
-// Create card for the reccomended movie, trailer button takes to youtube, new button runs function for selecting movie, watch on buttons show what streaming service 
+// Create card for the reccomended movie, trailer button takes to youtube, new button runs function for selecting movie, watch on buttons show what streaming service COTINUE TO WORK ON
 
