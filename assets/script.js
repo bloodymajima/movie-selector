@@ -2,24 +2,24 @@
 
 var questions = [
     {
-        question: "What is your mood today?",
+        question: "1. What is your mood today?",
         answer: "Happy" || "Neutral" || "Sad",
         choices: ["Happy", "Neutral", "Sad"]
     },
     {
-        question: "Question 2",
+        question: "2. Question 2",
         choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
     },
     {
-        question: "Question 3",
+        question: "3. Question 3",
         choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
     },
     {
-        question: "Question 4",
+        question: "4. Question 4",
         choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
     },
     {
-        question: "Question 5",
+        question: "5. Question 5",
         choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
     }
 
@@ -59,8 +59,7 @@ const restartQuiz = document.getElementById('start-over')
 
 
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+// Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
 function myFunction() {
     document.getElementById("dropdownMenu").classList.toggle("show");
   }
@@ -81,16 +80,13 @@ function myFunction() {
 
 
 
+startButton.addEventListener('click', showQ)
 
-homePage.classList.remove('hide')
-
-startButton.addEventListener('click', startQ)
-
-function startQ() {
-    homePage.classList.add('hide')
-    questionContainer.classList.remove('hide')
-    showQ()
-}
+// function startQ() {
+//     homePage.classList.add('hide')
+//     questionContainer.classList.remove('hide')
+//     showQ()
+// }
 
 function showQ() {
     questionContainer.innerHTML = ""
@@ -106,11 +102,6 @@ function showQ() {
 }
 
 //How to define variables using jQuery?
-
-
-// Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
-
-// When start button is pressed, it goes to the first question. hide class is removed for next question. 
 
 // When a question shows up, hide class is added for previous question, removed for current
 
