@@ -4,52 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/reset.css" />
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="./assets/style2.css" />
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-
     <title class="text-white">Watch This!</title>
 </head>
 
 <body>
+
     <header>
-        <h1>Watch This!</h1>
-                
+        <h1 class="my-2 text-4xl text-white">Watch This!</h1>
+
+        <nav>
+            <ul class="text-2xl text-white">
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropdownBtn">Genres</button>
-                    <div id="dropdownMenu" class="dropdown-content">
-                      <a href="./genre-htmls/comedy.html">Comedy</a>
-                      <a href="./genre-htmls/action.html">Action</a>
-                      <a href="./genre-htmls/adventure.html">Adventure</a>
-                      <a href="./genre-htmls/drama.html">Drama</a>
-                      <a href="./genre-htmls/horror.html">Horror</a>
-                      <a href="./genre-htmls/romance.html">Romance</a>
-                      <a href="./genre-htmls/sci-fi.html">Science Fiction</a>
-                      <a href="./genre-htmls/thriller.html">Thriller</a>
+                    <li class="lg:inline-block">
+                        <button onclick="myFunction()" class="dropdownBtn text-2xl mx-2">Genres</button>
+                    </li>
+                    <div id="dropdownMenu" class="text-lg dropdown-content">
+                        <a href="./genre-htmls/comedy.html">Comedy</a>
+                        <a href="./genre-htmls/action.html">Action</a>
+                        <a href="./genre-htmls/adventure.html">Adventure</a>
+                        <a href="./genre-htmls/drama.html">Drama</a>
+                        <a href="./genre-htmls/horror.html">Horror</a>
+                        <a href="./genre-htmls/romance.html">Romance</a>
+                        <a href="./genre-htmls/sci-fi.html">Science Fiction</a>
+                        <a href="./genre-htmls/thriller.html">Thriller</a>
                     </div>
-                  </div>
-                  
-<nav>
-    <ul>
-                <li><a href='./index.html'>Movie Quiz</a></li>
-                <li><a href='#'>Placeholder</a></li>
+                </div>
+                <li class="lg:inline-block mx-2"><a href='./index.html'>Movie Quiz</a></li>
+                <li class="lg:inline-block mx-2"><a href='#'>Placeholder</a></li>
             </ul>
+
         </nav>
+
     </header>
 
 
     <main>
 
-        <div class="jumbotron hide text-white" id="homepage">
-            <h2 class="quiz-title">Movie Questionaire</h2>
+        <div class="jumbotron hide text-white text-2xl" id="homepage">
+            <h2 class="text-5xl quiz-title font-bold">Movie Questionaire</h2>
             <div class="quiz-comments">
-                <p>It can be difficult and take up too much time to find a movie to watch</p>
-                <p>This website is designed recommend movies based off of your answers</p>
-                <p>Take this quick questionaire, so we can help find you a movie!</p>
+                <p class="text-lg">It can be difficult and take up too much time to find a movie to watch</p>
+                <p class="text-lg">This website is designed recommend movies based off of your answers</p>
+                <p class="text-lg">Take this quick questionaire, so we can help find you a movie!</p>
             </div>
+
+            <!-- <button class="btn hover:bg-blue-700 my-1" type="button" id="start-button">Start Questions</button>
+        </div>
+
+        <section class="col-12 hide text-white text-2xl" id="questions">
+            <button class="btn hover:bg-blue-700 back-button my-1">Back</button>
+            <button class="btn hover:bg-blue-700 next-button my-1">Next Question</button> -->
+
             <button class="btn hover:bg-blue-700" type="button" id="start-button">Start</button>
         </div>
 
@@ -59,8 +69,8 @@
             <button class="btn hide hover:bg-blue-700 back-button">Back</button>
             <button class="btn hide hover:bg-blue-700 next-button">Next Question</button>
 
-         <!-- In JS create question selections -->
-        <!-- <section class="container" id="questions">
+            <!-- In JS create question selections -->
+            <!-- <section class="container" id="questions">
             <div class="hide" id="question-1">
                 <h2>Question 1</h2>
                 <button class="btn back-button" >Back</button>
@@ -109,15 +119,13 @@
                 <button class="btn start-over" id="start-over">Start Again?</button>
             </div>
 
-            
-
-
         </section>
 
     </main>
 
 
 </body>
+
 <script src="./assets/script.js"></script>
 <!-- <script src="https://imdb-api.com/en/API/SearchMovie/k_12345678/"></script> -->
 <!-- <script src="https://api.trakt.tv"></script> -->
