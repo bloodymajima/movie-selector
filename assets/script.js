@@ -15,13 +15,14 @@ fetch(movieDBAPI, {
 
 })
 
-const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'+'&apiKey=1'+'/images/media/drink/vrwquq1478252802.jpg/preview'
+const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+// +'&apiKey=1'+'/images/media/drink/vrwquq1478252802.jpg/preview'
 console.log(randomNumber);
 fetch(drinkDBAPI, {
     }).then((response)=>{
         return response.json()
     }).then((data)=>{
-        const randomDrink = data.results[Math.floor(Math.random()* data.results)]
+        const randomDrink = data.drinks[Math.floor(Math.random()* data.drinks.length)]
         console.log(randomDrink);
 
     });
