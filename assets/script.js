@@ -23,7 +23,6 @@
 //     choices: ["Choice 1", "Choice 2", "Choice 3", "Choice 4"]
 //   }
 
-// ]
 const randomNumber = Math.floor(Math.random()* 566)
 const movieDBAPI = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page='+randomNumber+'&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&apiKey=51460ea6e050952a835f989f5534065e'
 console.log(randomNumber);
@@ -39,7 +38,7 @@ fetch(movieDBAPI, {
 
 })
 
-const urlforposter = 'http://image.tmdb.org/t/p/w500/'
+const urlForPoster = 'http://image.tmdb.org/t/p/w500/'
 
 const homePage = document.querySelector('#homepage');
 
@@ -53,7 +52,7 @@ const questionContainer = document.querySelector('#questions');
 
 const answersContainer = document.querySelector('#answers');
 
-const questionEle = document.querySelector('#question');
+const questionEl = document.querySelector('#question');
 
 // const questionOne = document.getElementById('question-1')
 
@@ -77,7 +76,7 @@ const restartQuiz = document.querySelector('#start-over');
 
 const questions = [
     {
-        question: "What is your mood today?",
+        question: "1. What is your mood today?",
         shortName: "mood",
         answers: [
             {
@@ -95,7 +94,7 @@ const questions = [
         ]
     },
     {
-        question: "Choose a genre",
+        question: "2. Choose a genre",
         shortName: "genre",
         answers: [
             {
@@ -181,7 +180,7 @@ const questions = [
         ]
     },
     {
-        question: "How old would you like the movie to be?",
+        question: "3. How old would you like the movie to be?",
         shortName: "movie age",
         answers: [
             {
@@ -207,7 +206,7 @@ const questions = [
         ]
     },
     {
-        question: "Choose a rating for your movie",
+        question: "4. Choose a rating for your movie",
         shortName: "rating",
         answers : [
             {
@@ -233,7 +232,7 @@ const questions = [
         ]
     },
     {
-        question: "Other catergories for your movie",
+        question: "5. Other catergories for your movie",
         shortName: "other",
         answers: [
             {
@@ -306,30 +305,6 @@ window.onclick = function (event) {
 }
 
 
-
-startButton.addEventListener('click', showQ)
-
-// function startQ() {
-//     homePage.classList.add('hide')
-//     questionContainer.classList.remove('hide')
-//     showQ()
-// }
-
-
-// function showQ() {
-//   questionContainer.innerHTML = ""
-//   var question = document.createElement("h2");
-//   question.innerHTML = questions[count].question;
-//   questionContainer.append(question)
-//   for (var i = 0; i < questions[count].choices.length; i++) {
-//     var button = document.createElement("button")
-//     button.textContent = questions[count].choices[i]
-//     button.value = questions[count].choices[i]
-//     questionContainer.append(button)
-//   }
-// }
-
-
 const userAnswers = [];
 
 let count = 0;
@@ -383,17 +358,17 @@ function showQ() {
   nextQuestionButton.addEventListener("click", handleSubmit);
   answersContainer.addEventListener("click", handleClick);
 
-//   startButton.addEventListener('click', showQ);
+  startButton.addEventListener('click', showQ);
 
-    // var question = document.createElement("h2");
-    // question.innerHTML = questionContainer[count].question;
-    // questionContainer.append(question)
-    // for (var i = 0; i < questions[count].choices.length; i++) {
-    //     var button = document.createElement("button")
-    //     button.textContent = questions[count].choices[i]
-    //     button.value = questions[count].choices[i]
-    //     questionContainer.append(button)
-    // }
+    var question = document.createElement("h2");
+    question.innerHTML = questionContainer[count].question;
+    questionContainer.append(question)
+    for (var i = 0; i < questions[count].choices.length; i++) {
+        var button = document.createElement("button")
+        button.textContent = questions[count].choices[i]
+        button.value = questions[count].choices[i]
+        questionContainer.append(button)
+    }
 }
 
 //How to define variables using jQuery?
