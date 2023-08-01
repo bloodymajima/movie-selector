@@ -37,6 +37,8 @@ fetch(youtubeAPI, {
       console.log(data)
   })
 
+// const urlforposter = 'http://image.tmdb.org/t/p/w500/'
+
 const homePage = document.querySelector('#homepage');
 
 const startButton = document.querySelector('#start-button');
