@@ -13,12 +13,6 @@ width: 60%;
 font-weight: bold;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 
 h1 {
     display: flex;
@@ -29,18 +23,16 @@ h1 {
     color: rgb(50, 103, 201);
     
 }
-#title {
-    font-size: 20pt;
-}
+
 /* add background image */
 html {
     background-image: url(movie\ background.jpg);
 }
 
 /* Edit "movie questionaire" - quiz-title */
-.quiz-title {
-    text-decoration: underline;
-}
+
+
+/* align title/header and nav links inline */
 
 /* Edit start question button */
 #start-button {
@@ -69,34 +61,28 @@ ul {
     flex-direction: row;
     list-style: none;
     justify-content: space-between;
-    width: 400px;
-    text-decoration: underline;
+    text-align: right;
+    width: 900px;
     color: rgb(50, 103, 201);
     line-height: 50pt;
-}
-
-/* center all buttons */
-.hide {
-    text-align: center;
-    color: rgb(50, 103, 201);
 }
 
 
 /* add scroll bar */
 
-.hide {
-    display: none;
-}
-/* align title/header and nav links inline */
-
-
 /* add font color */
 
-#homepage,
-#questions {
+.homepage,
+.questions {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
+}
+
+
+
+.hide {
+    display: none;
 }
