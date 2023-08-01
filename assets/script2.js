@@ -61,14 +61,29 @@ function getDrink(drinkName, instruction, picture) {
   instructionEl.textContent = instruction
 }
 
-const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyCBp-H6Xzxmc5vbdG9KKx53znHWxVz85qo'
+// function GetData() {
+//     const myRequest = new Request()
+//     fetch(myRequest)
+//     .then((response) => response.text())
+//     .then((text) => {
+//     ?
+//     });
+// }
+
+var link;
+const trailerButton = document.querySelector('#trailer');
+const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
+function GetVideo() {
 fetch(youtubeAPI, {
 }).then((res) => {
   return res.json()
 }).then((data) => {
   console.log(data)
-})
+  console.log(data.link)
+  
 
+})
+};
 const homePage = document.querySelector('#homepage');
 const GenButton = document.querySelector('#start-button');
 const movieTitleEl = document.getElementById('movie-title')
