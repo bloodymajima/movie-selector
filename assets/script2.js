@@ -30,28 +30,43 @@ console.log(urlForPoster + randomMovie.poster_path)
 
  })
 }
-// const urlForPoster = 'http://image.tmdb.org/t/p/w500'
 
-const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 
-console.log(randomNumber);
 fetch(drinkDBAPI, {
 }).then((response) => {
   return response.json()
 }).then((data) => {
   const randomDrink = data.drinks[Math.floor(Math.random() * data.drinks.length)]
   console.log(randomDrink);
+  console.log(randomDrink.name);
+  
 
-});
+})
 
-const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyCBp-H6Xzxmc5vbdG9KKx53znHWxVz85qo'
+// function GetData() {
+//     const myRequest = new Request()
+//     fetch(myRequest)
+//     .then((response) => response.text())
+//     .then((text) => {
+//     ?
+//     });
+// }
+
+var link;
+const trailerButton = document.querySelector('#trailer');
+const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
+function GetVideo() {
 fetch(youtubeAPI, {
 }).then((res) => {
   return res.json()
 }).then((data) => {
   console.log(data)
-})
+  console.log(data.link)
+  
 
+})
+};
 const homePage = document.querySelector('#homepage');
 const GenButton = document.querySelector('#start-button');
 const movieTitleEl = document.getElementById('movie-title')
