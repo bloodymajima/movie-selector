@@ -30,7 +30,8 @@ function RandomMovie() {
 
     })
 }
-// const urlForPoster = 'http://image.tmdb.org/t/p/w500'
+
+
 const drinkNameEl = document.getElementById('drink-name')
 const instructionEl = document.getElementById('instructions')
 const drinkPicEl = document.getElementById('drinkImg')
