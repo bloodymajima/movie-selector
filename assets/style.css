@@ -11,6 +11,7 @@ flex-direction: row;
 justify-content: space-between;
 width: 60%;
 font-weight: bold;
+/* background-color: rgb(50, 103, 201); */
 }
 
 
@@ -18,10 +19,9 @@ h1 {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-between;
+   justify-content: space-between;
     width: 100%;
     color: rgb(50, 103, 201);
-    
 }
 
 /* add background image */
@@ -35,14 +35,17 @@ html {
 /* align title/header and nav links inline */
 
 /* Edit start question button */
-#start-button {
+#start-button,
+#trailer,
+#generate {
    border-radius: 5px;
    background-color: rgb(50, 103, 201);
    color: rgb(240, 236, 237);
 }
 
 /* fix border */
-#homepage {
+#homepage,
+#recommendation {
     color: rgb(50, 103, 201);
     background-color: rgb(240, 236, 237);
     width: 450px;
@@ -53,6 +56,12 @@ html {
     text-align: center;
     margin: auto;
     line-height: 20pt;
+    margin-top: 100px;
+}
+
+img {
+    max-width: 100px;
+    max-height: 400px;
 }
 
 /* align title/header and nav links*/
@@ -73,7 +82,7 @@ ul {
 /* add font color */
 
 .homepage,
-.questions {
+.recommended {
     display: flex;
     justify-content: center;
     flex-direction: column;
