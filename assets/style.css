@@ -59,6 +59,20 @@ html {
     margin-top: 100px;
 }
 
+#drink {
+        color: rgb(50, 103, 201);
+        background-color: rgb(240, 236, 237);
+        width: 450px;
+        border-style: groove;
+        padding: 50px;
+        border-width: 20px;
+        border-color: rgb(50, 103, 201);
+        text-align: center;
+        margin: auto;
+        line-height: 20pt;
+        margin-top: 100px;
+    }
+
 img {
     max-width: 100px;
     max-height: 400px;
