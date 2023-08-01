@@ -15,7 +15,10 @@ fetch(movieDBAPI, {
 
 })
 
+const urlForPoster = 'http://image.tmdb.org/t/p/w500/'
+
 const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+
 console.log(randomNumber);
 fetch(drinkDBAPI, {
 }).then((response) => {
@@ -34,7 +37,7 @@ fetch(youtubeAPI, {
       console.log(data)
   })
 
-const urlforposter = 'http://image.tmdb.org/t/p/w500/'
+// const urlforposter = 'http://image.tmdb.org/t/p/w500/'
 
 const homePage = document.querySelector('#homepage');
 
@@ -48,7 +51,7 @@ const questionContainer = document.querySelector('#questions');
 
 const answersContainer = document.querySelector('#answers');
 
-const questionEle = document.querySelector('#question');
+const questionEl = document.querySelector('#question');
 
 const recContainer = document.querySelector('#recommended');
 
@@ -58,7 +61,7 @@ const newRecButton = document.querySelector('#new-rec');
 
 const questions = [
     {
-        question: "What is your mood today?",
+        question: "1. What is your mood today?",
         shortName: "mood",
         answers: [
             {
@@ -76,7 +79,7 @@ const questions = [
         ]
     },
     {
-        question: "Choose a genre",
+        question: "2. Choose a genre",
         shortName: "genre",
         answers: [
             {
@@ -161,6 +164,7 @@ const questions = [
             },
         ]
     },
+
     // {
     //     question: "How old would you like the movie to be?",
     //     shortName: "movie age",
@@ -261,6 +265,106 @@ const questions = [
     // }
 ];
 
+    {
+        question: "3. How old would you like the movie to be?",
+        shortName: "movie age",
+        answers: [
+            {
+               label: "Doesn't matter",
+               value: "N/A"
+             },
+            {
+                label: "Published in the last 3 years",
+                value: "> 3 years"
+            },
+            {
+                label: "Published in the last 5 years",
+                value: "> 5 years"
+            },
+            {
+                label: "Published in the last 10 years",
+                value: "> 10 years"
+            },
+            {
+                label: "Published in the last 20 years",
+                value: "> 20 years"
+            },
+        ]
+    },
+    {
+        question: "4. Choose a rating for your movie",
+        shortName: "rating",
+        answers : [
+            {
+               label: "Doesn't matter",
+               value: "N/A"
+             },
+            {
+                label: "Rated-G",
+                value: "G"
+            },
+            {
+                label: "Rated-PG",
+                value: "PG"
+            },
+            {
+                label: "Rated PG-13",
+                value: "> 10 years"
+            },
+            {
+                label: "Rated R",
+                value: "> 20 years"
+            },
+        ]
+    },
+    {
+        question: "5. Other catergories for your movie",
+        shortName: "other",
+        answers: [
+            {
+               label: "No preference",
+               value: "N/A"
+             },
+            {
+                label: "Based on a true story",
+                value: "true story"
+            },
+            {
+                label: "Set in New York City",
+                value: "nyc"
+            },
+            {
+                label: "Set in Las Vegas",
+                value: "las vegas"
+            },
+            {
+                label: "Space Movies",
+                value: "space"
+            },
+            {
+                label: "Based on a book",
+                value: "book"
+            },
+            {
+                label: "Spy and Cop movies",
+                value: "spy cop"
+            },
+            {
+                label: "Involves a wedding",
+                value: "wedding"
+            },
+            {
+                label: "Racing movies",
+                value: "racing"
+            },
+            {
+                label: "IMDb Top 250 Movies",
+                value: "top 250"
+            },
+        ]
+    }
+]
+
 homePage.classList.remove('hide');
 previousQuestionButton.classList.add('hide');
 nextQuestionButton.classList.add('hide');
@@ -287,7 +391,6 @@ window.onclick = function (event) {
 }
 
 
-
 startButton.addEventListener('click', startQ, showQ);
 
 const userAnswers = [];
@@ -307,13 +410,13 @@ function showQ() {
     answersContainer.innerHTML = "";
     const currentQuestion = questions[count];
     questionContainer.textContent = currentQuestion.question;
-    for (var j = 0; j < currentQuestion.answers.length; j++) {
+    for (var i = 0; i < currentQuestion.answers.length; i++) {
         const listItem = document.createElement("li");
         const label = document.createElement("label");
-        label.textContent = currentQuestion.answers[j].label;
+        label.textContent = currentQuestion.answers[i].label;
         const check = document.createElement("input");
         check.setAttribute("type", "checkbox");
-        check.setAttribute("value", currentQuestion.answers[j].value);
+        check.setAttribute("value", currentQuestion.answers[i].value);
         check.setAttribute("data-shortName", currentQuestion.shortName);
         label.appendChild(check);
         listItem.appendChild(label);

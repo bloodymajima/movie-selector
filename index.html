@@ -19,10 +19,11 @@
 
         <nav>
             <ul class="text-2xl text-white">
+                <li class="lg:inline-block mx-2"><a href='./index.html'>Movie Generator</a></li>
+                <li class="lg:inline-block mx-2"><a href='#'>Top Actors</a></li>
                 <div class="dropdown">
                     <li class="lg:inline-block">
-                        <button onclick="myFunction()" class="dropdownBtn text-2xl mx-2">Genres</button>
-                    </li>
+                        <button onclick="myFunction()" class="dropdownBtn text-2xl mx-2">Genres</button></li>
                     <div id="dropdownMenu" class="text-lg dropdown-content">
                         <a href="./genre-htmls/comedy.html">Comedy</a>
                         <a href="./genre-htmls/action.html">Action</a>
@@ -34,8 +35,6 @@
                         <a href="./genre-htmls/thriller.html">Thriller</a>
                     </div>
                 </div>
-                <li class="lg:inline-block mx-2"><a href='./index.html'>Movie Quiz</a></li>
-                <li class="lg:inline-block mx-2"><a href='#'>Placeholder</a></li>
             </ul>
 
         </nav>
@@ -45,18 +44,18 @@
 
     <main>
 
-        <div class="jumbotron hide text-white text-2xl" id="homepage">
-            <h2 class="text-5xl quiz-title font-bold">Movie Questionaire</h2>
+        <div class="jumbotron hide text-white text-2xl homepage" id="homepage">
+            <h2 class="text-4xl quiz-title font-bold">Movie Recommendation</h2>
             <div class="quiz-comments">
                 <p class="text-lg">It can be difficult and take up too much time to find a movie to watch</p>
-                <p class="text-lg">This website is designed recommend movies based off of your answers</p>
-                <p class="text-lg">Take this quick questionaire, so we can help find you a movie!</p>
+                <p class="text-lg">This website will recommend random movies</p>
+                <p class="text-lg">Click generate to find a movie!</p>
             </div>
 
-            <button class="btn hover:bg-blue-700 my-1" type="button" id="start-button">Start</button>
+            <button class="btn hover:bg-blue-700 p-1 my-1" type="button" id="start-button">Generate!</button>
         </div>
 
-        <section class="col-12 hide text-white text-2xl" id="questions">
+        <section class="col-12 hide text-white text-2xl questions" id="questions">
             <h2 class="hide" id="question">Question</h2>
             <ul class="hide" id="answers">Answer</ul>
             <button class="btn hide hover:bg-blue-700 back-button">Back</button>
@@ -70,13 +69,13 @@
                 <img src="https://">
 
                 <!-- Trailer button goes to youtube -->
-                <button class="btn trailer" id="trailer">Trailer</button>
+                <!-- <button class="btn trailer" id="trailer">Trailer</button> -->
 
                 <!-- When clicked, movie function runs again -->
-                <button class="btn new-rec" id="new-rec">New Recommendation</button>
+                <button class="btn new-rec" id="new-rec">Generate New</button>
 
                 <!-- Website(s) where the movie can be watched -->
-                <button class="btn watch-on" id="watch-on">Watch on: </button>
+                <!-- <button class="btn watch-on" id="watch-on">Watch on: </button> -->
 
                 <!-- Button to bring user back to start page if wanting to restart -->
                 <button class="btn start-over" id="start-over">Start Again?</button>
