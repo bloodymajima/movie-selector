@@ -30,7 +30,7 @@ fetch(drinkDBAPI, {
     });
 
 
-const urlforposter = 'http://image.tmdb.org/t/p/w500/'
+// const urlforposter = 'http://image.tmdb.org/t/p/w500/'
 
 const homePage = document.querySelector('#homepage');
 
@@ -307,13 +307,13 @@ function showQ() {
     answersContainer.innerHTML = "";
     const currentQuestion = questions[count];
     questionContainer.textContent = currentQuestion.question;
-    for (var j = 0; j < currentQuestion.answers.length; j++) {
+    for (var i = 0; i < currentQuestion.answers.length; i++) {
         const listItem = document.createElement("li");
         const label = document.createElement("label");
-        label.textContent = currentQuestion.answers[j].label;
+        label.textContent = currentQuestion.answers[i].label;
         const check = document.createElement("input");
         check.setAttribute("type", "checkbox");
-        check.setAttribute("value", currentQuestion.answers[j].value);
+        check.setAttribute("value", currentQuestion.answers[i].value);
         check.setAttribute("data-shortName", currentQuestion.shortName);
         label.appendChild(check);
         listItem.appendChild(label);
