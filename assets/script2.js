@@ -1,4 +1,3 @@
-// Generate button fetches random movie from api
 const homePage = document.querySelector('#homepage');
 const GenButton = document.querySelector('#start-button');
 
@@ -30,4 +29,4 @@ function myFunction() {
   }
 
 
-// A card exactly the same as the homepage pops up with a movie recommendation, possibly a button for a trailer or related vidoe, then a button to run the function again
+// button pops up with a movie recommendation, a button for a trailer or related video on youtube, then a button to run the function again
