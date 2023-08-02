@@ -52,29 +52,28 @@ function drinkName() {
     drink = randomDrink.strDrink
     console.log(randomDrink.strInstructions)
     drinkIns = randomDrink.strInstructions
-  });
+
+  })
+    .then(() => {
+    getDrink(drink, drinkIns, drinkPic)
+
+  })
 }
 
-function getDrink(drinkName, instruction, drinkPicEl) {
-  drinkNameEl.textContent = "Drink: " + drinkName
-  instructionEl.textContent = instruction
-  drinkPicEl = urlForDrink.picture
-  
-}
 
 var link;
 const trailerButton = document.querySelector('#trailer');
 const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
 function GetVideo() {
-fetch(youtubeAPI, {
-}).then((res) => {
-  return res.json()
-}).then((data) => {
-  console.log(data)
-  console.log(data.link)
-  
+  fetch(youtubeAPI, {
+  }).then((res) => {
+    return res.json()
+  }).then((data) => {
+    console.log(data)
+    console.log(data.link)
 
-})
+
+  })
 };
 const homePage = document.querySelector('#homepage');
 const GenButton = document.querySelector('#start-button');
@@ -110,6 +109,13 @@ function getMovie(movieTitle, poster, movieSummary) {
   posterImg.setAttribute("src", poster)
   movieTitleEl.textContent = "Movie: " + movieTitle
   movieSummaryEl.textContent = movieSummary
+}
+
+function getDrink(drinkName, instruction, drinkPicEl) {
+  drinkNameEl.textContent = "Drink: " + drinkName
+  instructionEl.textContent = instruction
+  drinkPicEl = urlForDrink.picture
+
 }
 
 // Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
