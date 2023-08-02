@@ -35,7 +35,7 @@ function RandomMovie() {
 const drinkNameEl = document.getElementById('drink-name')
 const instructionEl = document.getElementById('instructions')
 const drinkPicEl = document.getElementById('drinkImg')
-
+const urlForDrink = 'http://thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg/preview'
 var drink;
 var drinkIns;
 var drinkPic;
@@ -56,9 +56,12 @@ function drinkName() {
   });
 }
 
-function getDrink(drinkName, instruction, picture) {
+function getDrink(drinkName, instruction, drinkPicEl) {
   drinkNameEl.textContent = "Drink: " + drinkName
   instructionEl.textContent = instruction
+  drinkPicEl = urlForDrink.picture
+
+  getDrink()
 }
 
 // function GetData() {
