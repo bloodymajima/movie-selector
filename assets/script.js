@@ -164,11 +164,212 @@ const questions = [
             },
         ]
     },
+
+    // {
+    //     question: "How old would you like the movie to be?",
+    //     shortName: "movie age",
+    //     answers: [
+    //         {
+    //             label: "Doesn't matter",
+    //             value: "N/A"
+    //         },
+    //         {
+    //             label: "Published in the last 3 years",
+    //             value: "> 3 years"
+    //         },
+    //         {
+    //             label: "Published in the last 5 years",
+    //             value: "> 5 years"
+    //         },
+    //         {
+    //             label: "Published in the last 10 years",
+    //             value: "> 10 years"
+    //         },
+    //         {
+    //             label: "Published in the last 20 years",
+    //             value: "> 20 years"
+    //         },
+    //     ]
+    // },
+    // {
+    //     question: "Choose a rating for your movie",
+    //     shortName: "rating",
+    //     answers: [
+    //         {
+    //             label: "Doesn't matter",
+    //             value: "N/A"
+    //         },
+    //         {
+    //             label: "Rated-G",
+    //             value: "G"
+    //         },
+    //         {
+    //             label: "Rated-PG",
+    //             value: "PG"
+    //         },
+    //         {
+    //             label: "Rated PG-13",
+    //             value: "> 10 years"
+    //         },
+    //         {
+    //             label: "Rated R",
+    //             value: "> 20 years"
+    //         },
+    //     ]
+    // },
+    // {
+    //     question: "Other catergories for your movie",
+    //     shortName: "other",
+    //     answers: [
+    //         {
+    //             label: "No preference",
+    //             value: "N/A"
+    //         },
+    //         {
+    //             label: "Based on a true story",
+    //             value: "true story"
+    //         },
+    //         {
+    //             label: "Set in New York City",
+    //             value: "nyc"
+    //         },
+    //         {
+    //             label: "Set in Las Vegas",
+    //             value: "las vegas"
+    //         },
+    //         {
+    //             label: "Space Movies",
+    //             value: "space"
+    //         },
+    //         {
+    //             label: "Based on a book",
+    //             value: "book"
+    //         },
+    //         {
+    //             label: "Spy and Cop movies",
+    //             value: "spy cop"
+    //         },
+    //         {
+    //             label: "Involves a wedding",
+    //             value: "wedding"
+    //         },
+    //         {
+    //             label: "Racing movies",
+    //             value: "racing"
+    //         },
+    //         {
+    //             label: "IMDb Top 250 Movies",
+    //             value: "top 250"
+    //         },
+    //     ]
+    // }
+];
+
+    {
+        question: "3. How old would you like the movie to be?",
+        shortName: "movie age",
+        answers: [
+            {
+               label: "Doesn't matter",
+               value: "N/A"
+             },
+            {
+                label: "Published in the last 3 years",
+                value: "> 3 years"
+            },
+            {
+                label: "Published in the last 5 years",
+                value: "> 5 years"
+            },
+            {
+                label: "Published in the last 10 years",
+                value: "> 10 years"
+            },
+            {
+                label: "Published in the last 20 years",
+                value: "> 20 years"
+            },
+        ]
+    },
+    {
+        question: "4. Choose a rating for your movie",
+        shortName: "rating",
+        answers : [
+            {
+               label: "Doesn't matter",
+               value: "N/A"
+             },
+            {
+                label: "Rated-G",
+                value: "G"
+            },
+            {
+                label: "Rated-PG",
+                value: "PG"
+            },
+            {
+                label: "Rated PG-13",
+                value: "> 10 years"
+            },
+            {
+                label: "Rated R",
+                value: "> 20 years"
+            },
+        ]
+    },
+    {
+        question: "5. Other catergories for your movie",
+        shortName: "other",
+        answers: [
+            {
+               label: "No preference",
+               value: "N/A"
+             },
+            {
+                label: "Based on a true story",
+                value: "true story"
+            },
+            {
+                label: "Set in New York City",
+                value: "nyc"
+            },
+            {
+                label: "Set in Las Vegas",
+                value: "las vegas"
+            },
+            {
+                label: "Space Movies",
+                value: "space"
+            },
+            {
+                label: "Based on a book",
+                value: "book"
+            },
+            {
+                label: "Spy and Cop movies",
+                value: "spy cop"
+            },
+            {
+                label: "Involves a wedding",
+                value: "wedding"
+            },
+            {
+                label: "Racing movies",
+                value: "racing"
+            },
+            {
+                label: "IMDb Top 250 Movies",
+                value: "top 250"
+            },
+        ]
+    }
 ]
 
 homePage.classList.remove('hide');
 previousQuestionButton.classList.add('hide');
 nextQuestionButton.classList.add('hide');
+
+// startButton.addEventListener('click', startQ, showQ);
 
 // Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
 function myFunction() {
