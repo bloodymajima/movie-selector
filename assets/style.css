@@ -12,6 +12,7 @@ flex-direction: row;
 justify-content: space-between;
 width: 60%;
 font-weight: bold;
+/* background-color: rgb(50, 103, 201); */
 }
 
 
@@ -19,30 +20,33 @@ h1 {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-between;
+   justify-content: space-between;
     width: 100%;
     color: rgb(50, 103, 201);
-    
 }
 
 
 /* add background image */
-html {
-    background-image: url(movie\ background.jpg);
+body {
+    background-image: url(pexels-photo-3131971.jpeg);
+    background-size: cover;
 }
 
 
 /* align title/header and nav links inline */
 
 /* Edit start question button */
-#start-button {
+#start-button,
+#trailer,
+#generate {
    border-radius: 5px;
    background-color: rgb(50, 103, 201);
    color: rgb(240, 236, 237);
 }
 
 /* fix border */
-#homepage {
+#homepage,
+#recommendation {
     color: rgb(50, 103, 201);
     background-color: rgb(240, 236, 237);
     width: 450px;
@@ -52,7 +56,11 @@ html {
     border-color: rgb(50, 103, 201);
     text-align: center;
     margin: auto;
-    line-height: 23pt;
+    line-height: 20pt;
+}
+
+main {
+    padding: 210px;
 }
 
 /* align title/header and nav links*/
@@ -66,11 +74,13 @@ nav {
     /* line-height: 50pt; */
 }
 
+/* add a scroll */
+
 
 
 
 .homepage,
-.questions {
+.recommended {
     display: flex;
     justify-content: center;
     flex-direction: column;
