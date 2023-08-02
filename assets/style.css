@@ -11,7 +11,6 @@ flex-direction: row;
 justify-content: space-between;
 width: 60%;
 font-weight: bold;
-/* background-color: rgb(50, 103, 201); */
 }
 
 
@@ -25,16 +24,11 @@ h1 {
 }
 
 /* add background image */
-html {
+body {
     background-image: url(movie\ background.jpg);
+    background-size: cover;
 }
 
-/* Edit "movie questionaire" - quiz-title */
-
-
-/* align title/header and nav links inline */
-
-/* Edit start question button */
 #start-button,
 #trailer,
 #generate {
@@ -43,7 +37,6 @@ html {
    color: rgb(240, 236, 237);
 }
 
-/* fix border */
 #homepage,
 #recommendation {
     color: rgb(50, 103, 201);
@@ -73,12 +66,6 @@ html {
         margin-top: 100px;
     }
 
-img {
-    max-width: 100px;
-    max-height: 400px;
-}
-
-/* align title/header and nav links*/
 ul {
     display: flex;
     flex-direction: row;
@@ -90,11 +77,6 @@ ul {
     line-height: 50pt;
 }
 
-
-/* add scroll bar */
-
-/* add font color */
-
 .homepage,
 .recommended {
     display: flex;
@@ -103,8 +85,6 @@ ul {
     align-items: center;
     row-gap: 5px;
 }
-
-
 
 .hide {
     display: none;

@@ -1,4 +1,3 @@
-
 // Generate button fetches random movie from api
 const urlForPoster = 'http://image.tmdb.org/t/p/w500'
 const randomNumber = Math.floor(Math.random() * 566)
@@ -60,18 +59,8 @@ function getDrink(drinkName, instruction, drinkPicEl) {
   drinkNameEl.textContent = "Drink: " + drinkName
   instructionEl.textContent = instruction
   drinkPicEl = urlForDrink.picture
-
-  getDrink()
+  
 }
-
-// function GetData() {
-//     const myRequest = new Request()
-//     fetch(myRequest)
-//     .then((response) => response.text())
-//     .then((text) => {
-//     ?
-//     });
-// }
 
 var link;
 const trailerButton = document.querySelector('#trailer');
@@ -96,7 +85,6 @@ const newMovieBtn = document.getElementById('generate')
 const posterImg = document.getElementById('poster')
 const movieSummaryEl = document.getElementById('summary')
 const drinkPage = document.getElementById('drink')
-// console.log(newMovieBtn)
 
 homePage.classList.remove('hide');
 recomendMovie.classList.add('hide');
@@ -104,7 +92,6 @@ drinkPage.classList.add('hide')
 
 GenButton.addEventListener('click', RandomMovie)
 GenButton.addEventListener('click', drinkName)
-// trailerBtn.addEventListener('click', getTrailer)
 newMovieBtn.addEventListener('click', () => {
   console.log("click")
   RandomMovie();
@@ -143,6 +130,5 @@ window.onclick = function (event) {
     }
   }
 }
-
 
 // button pops up with a movie recommendation, a button for a trailer or related video on youtube, then a button to run the function again
