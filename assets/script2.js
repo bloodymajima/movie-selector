@@ -128,20 +128,29 @@ function drinkName() {
     drink = randomDrink.strDrink
     console.log(randomDrink.strInstructions)
     drinkIns = randomDrink.strInstructions
-    console.log(randomDrink.strDrinkThumb)
-    drinkPic = randomDrink.strDrinkThumb;
 
-  }).then (() => {
+  })
+    .then(() => {
     getDrink(drink, drinkIns, drinkPic)
-  });
 
-  };
+  })
+}
 
-// function getDrink(drinkName, instruction, picture) {
-//   drinkNameEl.textContent = "Drink: " + drinkName
-//   instructionEl.textContent = instruction
-// }
 
+var link;
+const trailerButton = document.querySelector('#trailer');
+const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
+function GetVideo() {
+  fetch(youtubeAPI, {
+  }).then((res) => {
+    return res.json()
+  }).then((data) => {
+    console.log(data)
+    console.log(data.link)
+
+
+  })
+};
 const homePage = document.querySelector('#homepage');
 
 const movieTitleEl = document.getElementById('movie-title')
@@ -176,6 +185,13 @@ function getMovie(movieTitle, poster, movieSummary) {
   posterImg.setAttribute("src", poster)
   movieTitleEl.textContent = "Movie: " + movieTitle
   movieSummaryEl.textContent = movieSummary
+}
+
+function getDrink(drinkName, instruction, drinkPicEl) {
+  drinkNameEl.textContent = "Drink: " + drinkName
+  instructionEl.textContent = instruction
+  drinkPicEl = urlForDrink.picture
+
 }
 
 // Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
