@@ -12,7 +12,6 @@ flex-direction: row;
 justify-content: space-between;
 width: 60%;
 font-weight: bold;
-/* background-color: rgb(50, 103, 201); */
 }
 
 
@@ -28,14 +27,10 @@ h1 {
 
 /* add background image */
 body {
-    background-image: url(pexels-photo-3131971.jpeg);
+    background-image: url(movie\ background.jpg);
     background-size: cover;
 }
 
-
-/* align title/header and nav links inline */
-
-/* Edit start question button */
 #start-button,
 #trailer,
 #generate {
@@ -44,7 +39,6 @@ body {
    color: rgb(240, 236, 237);
 }
 
-/* fix border */
 #homepage,
 #recommendation {
     color: rgb(50, 103, 201);
@@ -59,12 +53,21 @@ body {
     line-height: 20pt;
 }
 
-main {
-    padding: 210px;
-}
+#drink {
+        color: rgb(50, 103, 201);
+        background-color: rgb(240, 236, 237);
+        width: 450px;
+        border-style: groove;
+        padding: 50px;
+        border-width: 20px;
+        border-color: rgb(50, 103, 201);
+        text-align: center;
+        margin: auto;
+        line-height: 20pt;
+        margin-top: 100px;
+    }
 
-/* align title/header and nav links*/
-nav {
+ul {
     display: flex;
     flex-direction: row;
     list-style: none;
@@ -74,11 +77,6 @@ nav {
     /* line-height: 50pt; */
 }
 
-/* add a scroll */
-
-
-
-
 .homepage,
 .recommended {
     display: flex;
@@ -87,8 +85,6 @@ nav {
     align-items: center;
     row-gap: 5px;
 }
-
-
 
 .hide {
     display: none;
