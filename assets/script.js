@@ -1,5 +1,4 @@
-// Variables
-
+// Functions for APIs
 const randomNumber = Math.floor(Math.random() * 566)
 const movieDBAPI = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=' + randomNumber + '&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&apiKey=51460ea6e050952a835f989f5534065e'
 console.log(randomNumber);
@@ -37,8 +36,7 @@ fetch(youtubeAPI, {
       console.log(data)
   })
 
-// const urlforposter = 'http://image.tmdb.org/t/p/w500/'
-
+// Variables
 const homePage = document.querySelector('#homepage');
 
 const startButton = document.querySelector('#start-button');
@@ -59,6 +57,7 @@ const trailerButton = document.querySelector('#trailer');
 
 const newRecButton = document.querySelector('#new-rec');
 
+// For MVP
 const questions = [
     {
         question: "1. What is your mood today?",
@@ -164,212 +163,11 @@ const questions = [
             },
         ]
     },
-
-    // {
-    //     question: "How old would you like the movie to be?",
-    //     shortName: "movie age",
-    //     answers: [
-    //         {
-    //             label: "Doesn't matter",
-    //             value: "N/A"
-    //         },
-    //         {
-    //             label: "Published in the last 3 years",
-    //             value: "> 3 years"
-    //         },
-    //         {
-    //             label: "Published in the last 5 years",
-    //             value: "> 5 years"
-    //         },
-    //         {
-    //             label: "Published in the last 10 years",
-    //             value: "> 10 years"
-    //         },
-    //         {
-    //             label: "Published in the last 20 years",
-    //             value: "> 20 years"
-    //         },
-    //     ]
-    // },
-    // {
-    //     question: "Choose a rating for your movie",
-    //     shortName: "rating",
-    //     answers: [
-    //         {
-    //             label: "Doesn't matter",
-    //             value: "N/A"
-    //         },
-    //         {
-    //             label: "Rated-G",
-    //             value: "G"
-    //         },
-    //         {
-    //             label: "Rated-PG",
-    //             value: "PG"
-    //         },
-    //         {
-    //             label: "Rated PG-13",
-    //             value: "> 10 years"
-    //         },
-    //         {
-    //             label: "Rated R",
-    //             value: "> 20 years"
-    //         },
-    //     ]
-    // },
-    // {
-    //     question: "Other catergories for your movie",
-    //     shortName: "other",
-    //     answers: [
-    //         {
-    //             label: "No preference",
-    //             value: "N/A"
-    //         },
-    //         {
-    //             label: "Based on a true story",
-    //             value: "true story"
-    //         },
-    //         {
-    //             label: "Set in New York City",
-    //             value: "nyc"
-    //         },
-    //         {
-    //             label: "Set in Las Vegas",
-    //             value: "las vegas"
-    //         },
-    //         {
-    //             label: "Space Movies",
-    //             value: "space"
-    //         },
-    //         {
-    //             label: "Based on a book",
-    //             value: "book"
-    //         },
-    //         {
-    //             label: "Spy and Cop movies",
-    //             value: "spy cop"
-    //         },
-    //         {
-    //             label: "Involves a wedding",
-    //             value: "wedding"
-    //         },
-    //         {
-    //             label: "Racing movies",
-    //             value: "racing"
-    //         },
-    //         {
-    //             label: "IMDb Top 250 Movies",
-    //             value: "top 250"
-    //         },
-    //     ]
-    // }
-];
-
-    {
-        question: "3. How old would you like the movie to be?",
-        shortName: "movie age",
-        answers: [
-            {
-               label: "Doesn't matter",
-               value: "N/A"
-             },
-            {
-                label: "Published in the last 3 years",
-                value: "> 3 years"
-            },
-            {
-                label: "Published in the last 5 years",
-                value: "> 5 years"
-            },
-            {
-                label: "Published in the last 10 years",
-                value: "> 10 years"
-            },
-            {
-                label: "Published in the last 20 years",
-                value: "> 20 years"
-            },
-        ]
-    },
-    {
-        question: "4. Choose a rating for your movie",
-        shortName: "rating",
-        answers : [
-            {
-               label: "Doesn't matter",
-               value: "N/A"
-             },
-            {
-                label: "Rated-G",
-                value: "G"
-            },
-            {
-                label: "Rated-PG",
-                value: "PG"
-            },
-            {
-                label: "Rated PG-13",
-                value: "> 10 years"
-            },
-            {
-                label: "Rated R",
-                value: "> 20 years"
-            },
-        ]
-    },
-    {
-        question: "5. Other catergories for your movie",
-        shortName: "other",
-        answers: [
-            {
-               label: "No preference",
-               value: "N/A"
-             },
-            {
-                label: "Based on a true story",
-                value: "true story"
-            },
-            {
-                label: "Set in New York City",
-                value: "nyc"
-            },
-            {
-                label: "Set in Las Vegas",
-                value: "las vegas"
-            },
-            {
-                label: "Space Movies",
-                value: "space"
-            },
-            {
-                label: "Based on a book",
-                value: "book"
-            },
-            {
-                label: "Spy and Cop movies",
-                value: "spy cop"
-            },
-            {
-                label: "Involves a wedding",
-                value: "wedding"
-            },
-            {
-                label: "Racing movies",
-                value: "racing"
-            },
-            {
-                label: "IMDb Top 250 Movies",
-                value: "top 250"
-            },
-        ]
-    }
 ]
 
 homePage.classList.remove('hide');
 previousQuestionButton.classList.add('hide');
 nextQuestionButton.classList.add('hide');
-
-// startButton.addEventListener('click', startQ, showQ);
 
 // Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
 function myFunction() {
@@ -390,7 +188,7 @@ window.onclick = function (event) {
     }
 }
 
-
+// Starts the quiz when you click start (for MVP)
 startButton.addEventListener('click', startQ, showQ);
 
 const userAnswers = [];
@@ -445,23 +243,5 @@ function showQ() {
 
     nextQuestionButton.addEventListener("click", handleSubmit);
     answersContainer.addEventListener("click", handleClick);
-
-    // var question = document.createElement("h2");
-    // question.innerHTML = questionContainer[count].question;
-    // questionContainer.append(question)
-    // for (var i = 0; i < questions[count].choices.length; i++) {
-    //     var button = document.createElement("button")
-    //     button.textContent = questions[count].choices[i]
-    //     button.value = questions[count].choices[i]
-    //     questionContainer.append(button)
-    // }
 }
-
-//How to define variables using jQuery? DONE
-
-// When a question shows up, hide class is added for previous question, removed for current NOT WORKING
-
-// Input from questions goes into function for selecting movies NOT WORKING
-
-// Create card for the reccomended movie, trailer button takes to youtube, new button runs function for selecting movie, watch on buttons show what streaming service CONTINUE TO WORK ON
 
