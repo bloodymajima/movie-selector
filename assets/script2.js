@@ -128,7 +128,8 @@ function drinkName() {
     drink = randomDrink.strDrink
     console.log(randomDrink.strInstructions)
     drinkIns = randomDrink.strInstructions
-
+    console.log(randomDrink.strDrinkThumb)
+    drinkPic = randomDrink.strDrinkThumb;
   })
     .then(() => {
     getDrink(drink, drinkIns, drinkPic)
@@ -136,20 +137,26 @@ function drinkName() {
   })
 }
 
+function getDrink(drinkName, instruction, drinkPic) {
+  drinkNameEl.textContent = "Drink: " + drinkName
+  instructionEl.textContent = instruction
+  drinkPicEl.textContent = drinkPic
+  
+}
 
 var link;
-const trailerButton = document.querySelector('#trailer');
+// const trailerButton = document.querySelector('#trailer');
 const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
 function GetVideo() {
-  fetch(youtubeAPI, {
-  }).then((res) => {
-    return res.json()
-  }).then((data) => {
-    console.log(data)
-    console.log(data.link)
+fetch(youtubeAPI, {
+}).then((res) => {
+  return res.json()
+}).then((data) => {
+  console.log(data)
+  console.log(data.link)
+  
 
-
-  })
+})
 };
 const homePage = document.querySelector('#homepage');
 
