@@ -1,11 +1,8 @@
 var tag = document.createElement('script');
-
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
 const GenButton = document.querySelector('#start-button');
-
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var player;
@@ -24,8 +21,6 @@ function onYouTubeIframeAPIReady() {
   });
   GenButton.classList.remove("hide")
 }
-
-
 // Generate button fetches random movie from api
 const urlForPoster = 'http://image.tmdb.org/t/p/w500'
 const randomNumber = Math.floor(Math.random() * 566)
@@ -50,18 +45,15 @@ function RandomMovie() {
     poster = urlForPoster + randomMovie.poster_path
     console.log(randomMovie.overview)
     summary = randomMovie.overview
-
   })
     .then(() => {
       getMovie(title, poster, summary)
       GetVideo(title)
     })
 }
-
 var thumbnail;
 const trailerButton = document.querySelector('#trailer');
 // const youtubeAPI = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&key=AIzaSyAsNq2OkSa7Sb9Gdt6PuXlq9TCa5hZ7edI"
-
 function GetVideo(title) {
 const youtubeAPI = `https://youtube.googleapis.com/youtube/v3/search?maxResults=1&part=snippet&type=video&key=AIzaSyAsNq2OkSa7Sb9Gdt6PuXlq9TCa5hZ7edI&q=${title}`
 fetch(youtubeAPI, {
@@ -75,24 +67,15 @@ fetch(youtubeAPI, {
 // let video = data.items
 // for(video of videos){
 //   console.log(video.snippet.title)
-
 // }
-
   // link = youtubeAPI + "&q=" + title
-  
-  
-
 })
 };
-
 // 2. This code loads the IFrame Player API code asynchronously.
-
-
 // // 4. The API will call this function when the video player is ready.
 // function onPlayerReady(event) {
 //   event.target.playVideo();
 // }
-
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
@@ -106,8 +89,6 @@ fetch(youtubeAPI, {
 // function stopVideo() {
 //   player.stopVideo();
 // }
-
-
 const drinkNameEl = document.getElementById('drink-name')
 const instructionEl = document.getElementById('instructions')
 const drinkPicEl = document.getElementById('drinkImg')
@@ -116,7 +97,6 @@ var drinkIns;
 var drinkPic;
 const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
 console.log(randomNumber);
-
 function drinkName() {
   fetch(drinkDBAPI, {
   }).then((response) => {
@@ -133,33 +113,20 @@ function drinkName() {
   })
     .then(() => {
     getDrink(drink, drinkIns, drinkPic)
-
   })
 }
 
-function getDrink(drinkName, instruction, drinkPic) {
-  drinkNameEl.textContent = "Drink: " + drinkName
-  instructionEl.textContent = instruction
-  drinkPicEl.textContent = drinkPic
-  
-}
-
-var link;
-// const trailerButton = document.querySelector('#trailer');
-const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
-function GetVideo() {
-fetch(youtubeAPI, {
-}).then((res) => {
-  return res.json()
-}).then((data) => {
-  console.log(data)
-  console.log(data.link)
-  
-
-})
-};
+  function getDrink(drinkName, instruction, drinkPic) {
+    drinkNameEl.textContent = "Drink: " + drinkName
+    instructionEl.textContent = instruction
+    drinkPicEl.textContent = drinkPic
+    drinkPicEl.setAttribute("src", drinkPic)
+  }
+// function getDrink(drinkName, instruction, picture) {
+//   drinkNameEl.textContent = "Drink: " + drinkName
+//   instructionEl.textContent = instruction
+// }
 const homePage = document.querySelector('#homepage');
-
 const movieTitleEl = document.getElementById('movie-title')
 const recomendMovie = document.getElementById('recommendation')
 const trailerBtn = document.getElementById('trailer')
@@ -167,24 +134,19 @@ const newMovieBtn = document.getElementById('generate')
 const posterImg = document.getElementById('poster')
 const movieSummaryEl = document.getElementById('summary')
 const drinkPage = document.getElementById('drink')
-
 homePage.classList.remove('hide');
 recomendMovie.classList.add('hide');
 drinkPage.classList.add('hide')
-
 GenButton.addEventListener('click', RandomMovie)
 GenButton.addEventListener('click', drinkName)
 newMovieBtn.addEventListener('click', () => {
   console.log("click")
   RandomMovie();
-
 })
 newMovieBtn.addEventListener('click', () => {
   console.log("click")
   drinkName();
 })
-
-
 function getMovie(movieTitle, poster, movieSummary) {
   homePage.classList.add('hide');
   recomendMovie.classList.remove('hide');
@@ -193,19 +155,10 @@ function getMovie(movieTitle, poster, movieSummary) {
   movieTitleEl.textContent = "Movie: " + movieTitle
   movieSummaryEl.textContent = movieSummary
 }
-
-function getDrink(drinkName, instruction, drinkPicEl) {
-  drinkNameEl.textContent = "Drink: " + drinkName
-  instructionEl.textContent = instruction
-  drinkPicEl = urlForDrink.picture
-
-}
-
 // Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
 function myFunction() {
   document.getElementById("dropdownMenu").classList.toggle("show");
 }
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
   if (!event.target.matches('.dropdownBtn')) {
@@ -219,5 +172,4 @@ window.onclick = function (event) {
     }
   }
 }
-
 // button pops up with a movie recommendation, a button for a trailer or related video on youtube, then a button to run the function again

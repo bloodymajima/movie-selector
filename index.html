@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +10,9 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title class="text-white">Watch This!</title>
 </head>
-
 <body>
-
     <header>
         <h1 class="m-4 text-4xl text-white font-extrabold">Watch This!</h1>
-
         <nav>
             <ul class="flex justify-end text-2xl text-white">
                 <button type="button" class="lg:inline-block mt-4 m1-4 px-5 py-2.5 text-white font-bold bg-blue-700 hover:bg-blue-800"><li><a href='./index.html'>Movie Generator</a></li></button>
@@ -37,14 +33,9 @@
                     </div>
                 </div>
             </ul>
-
         </nav>
-
     </header>
-
-
     <main>
-
         <div class="hide text-white text-2xl homepage" id="homepage">
             <h2 class="text-4xl quiz-title font-bold">Movie Recommendation</h2>
             <div class="quiz-comments">
@@ -52,56 +43,43 @@
                 <p class="text-lg">This website will recommend random movies</p>
                 <p class="text-lg">Click generate to find a movie!</p>
             </div>
-
-            <button class="btn hover:bg-blue-700 p-1 my-1" type="button" id="start-button">Generate!</button>
+            <button class="btn hover:bg-blue-700 p-1 my-1 hide" type="button" id="start-button">Generate!</button>
         </div>
-
         <!-- <section class="col-12 hide text-white text-2xl questions" id="questions">
             <h2 class="hide" id="question">Question</h2>
             <ul class="hide" id="answers">Answer</ul>
             <button class="btn hide hover:bg-blue-700 back-button">Back</button>
             <button class="btn hide hover:bg-blue-700 next-button">Next Question</button> -->
-
         <!-- In JS create question selections DONE-->
-
         <!-- create card element in JS for recommended movies -->
         <div class="col-12 hide text-white text-2xl recommended" id="recommendation">
             <h2 class="text-4xl quiz-title font-bold" id="movie-title"></h2>
             <!-- Image of recommended movie shows up -->
             <img src="https://" id="poster">
-
-            <p class= "text-base my-1" id="summary"></p>
+            <p class="text-xl" id="summary"></p>
             <div class-="inline-flex">
                 <!-- Trailer button goes to youtube -->
                 <button class="btn hover:bg-blue-700 p-1 my-1" type="button" id="trailer">Trailer</button>
-
+                <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+    <script>
+    </script>
                 <!-- When clicked, movie function runs again -->
                 <button class="btn hover:bg-blue-700 p-1 my-1" type="button" id="generate">Generate New</button>
             </div>
-
-
-            <div class="col-12 hide text-2xl drink" id="drink">
+            <div class="col-12 hide text-white text-2xl drink" id="drink">
                 <h2 class="text-4xl quiz-title font-bold" id="drink-name"></h2>
                 <!-- Image of recommended movie shows up -->
-                <img src="https://" id="drinkImg">
-    
-                <p class="text-base my-1" id="instructions"></p>
+                <img src="https://" id="picture">
+                <p class="text-xl" id="instructions"></p>
                </div>
-
             <!-- Website(s) where the movie can be watched -->
             <!-- <button class="btn watch-on" id="watch-on">Watch on: </button> -->
-
             <!-- Button to bring user back to start page if wanting to restart -->
             <!-- <button class="btn start-over" id="start-over">Start Again?</button> -->
         </div>
-
         <!-- </section> -->
-
     </main>
-
-
 </body>
-
 <script src="./assets/script2.js"></script>
-
 </html>
