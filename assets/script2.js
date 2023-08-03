@@ -116,16 +116,28 @@ function drinkName() {
   })
 }
 
-  function getDrink(drinkName, instruction, drinkPic) {
-    drinkNameEl.textContent = "Drink: " + drinkName
-    instructionEl.textContent = instruction
-    drinkPicEl.textContent = drinkPic
-    drinkPicEl.setAttribute("src", drinkPic)
-  }
-// function getDrink(drinkName, instruction, picture) {
-//   drinkNameEl.textContent = "Drink: " + drinkName
-//   instructionEl.textContent = instruction
-// }
+function getDrink(drinkName, instruction, drinkPic) {
+  drinkNameEl.textContent = "Drink: " + drinkName
+  instructionEl.textContent = instruction
+  // drinkPicEl.textContent = drinkPic
+  drinkPicEl.setAttribute("src", drinkPic)
+  
+}
+
+var link;
+// const trailerButton = document.querySelector('#trailer');
+const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
+function GetVideo() {
+fetch(youtubeAPI, {
+}).then((res) => {
+  return res.json()
+}).then((data) => {
+  console.log(data)
+  console.log(data.link)
+  
+
+})
+};
 const homePage = document.querySelector('#homepage');
 const movieTitleEl = document.getElementById('movie-title')
 const recomendMovie = document.getElementById('recommendation')
