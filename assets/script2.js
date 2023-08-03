@@ -128,22 +128,19 @@ function drinkName() {
     drink = randomDrink.strDrink
     console.log(randomDrink.strInstructions)
     drinkIns = randomDrink.strInstructions
-<<<<<<< HEAD
-  });
-=======
-
+    console.log(randomDrink.strDrinkThumb)
+    drinkPic = randomDrink.strDrinkThumb;
   })
     .then(() => {
     getDrink(drink, drinkIns, drinkPic)
 
   })
->>>>>>> d0c6df7d71e77c9ebae752015beab7bf3a6dd581
 }
 
-function getDrink(drinkName, instruction, drinkPicEl) {
+function getDrink(drinkName, instruction, drinkPic) {
   drinkNameEl.textContent = "Drink: " + drinkName
   instructionEl.textContent = instruction
-  drinkPicEl = urlForDrink.picture
+  drinkPicEl.textContent = drinkPic
   
 }
 
