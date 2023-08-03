@@ -43,7 +43,7 @@ body {
 #recommendation {
     color: rgb(50, 103, 201);
     background-color: rgb(240, 236, 237);
-    width: 450px;
+    width: 550px;
     border-style: groove;
     padding: 50px;
     border-width: 20px;
@@ -51,20 +51,22 @@ body {
     text-align: center;
     margin: auto;
     line-height: 20pt;
+    margin-top: 80px;
+    margin-bottom: 150px;
 }
 
 #drink {
         color: rgb(50, 103, 201);
         background-color: rgb(240, 236, 237);
-        width: 450px;
+        width: 550px;
         border-style: groove;
         padding: 50px;
         border-width: 20px;
         border-color: rgb(50, 103, 201);
         text-align: center;
-        margin: auto;
+        /* margin: auto; */
         line-height: 20pt;
-        margin-top: 100px;
+        margin-bottom: -70px;
     }
 
 ul {
@@ -84,6 +86,11 @@ ul {
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
+}
+
+img {
+    height: 500px;
+    width: 250px;
 }
 
 .hide {
