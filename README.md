@@ -1,6 +1,10 @@
 # movie-selector
 Application that randomly chooses a movie for you, along with a mixed drink.
+Our motivation for creating this project is to solve a problem. This project solves a common issue that affects a lot of us. Not being able to pick a movie because we’re bored. Our Random Movie Generator fixes that issue and provides a trailer to offer a glimpse of the movie. 
 
+## User story 
+As an avid movie watcher, I want to be able to have a movie title prepared for me to watch, so I don’t have to waste time finding one.
+As an avid movie watcher, I want to be able to view the trailer before choosing a movie.
 
 ## Credits
 [w3schools](https://www.w3schools.com/howto/howto_js_dropdown.asp)
