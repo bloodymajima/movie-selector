@@ -12,3 +12,6 @@ Thank you to our tutors and our TAs, Kimberly and Jessica, and our instructor, T
 
 ## Presentation
 [Google Slides](https://docs.google.com/presentation/d/1BC5DIvuryNcqtn5lrjK4RN62Cbwj-2bbhAkF-kPF_AI/edit#slide=id.g25dae11cf9d_0_248)
+
+## Picture
+![Screenshot of website](assets\_Users_lukehevey_bootcamp_movie-selector_index.html.png)
