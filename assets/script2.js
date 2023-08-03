@@ -91,7 +91,7 @@ fetch(youtubeAPI, {
 // }
 const drinkNameEl = document.getElementById('drink-name')
 const instructionEl = document.getElementById('instructions')
-const drinkPicEl = document.getElementById('drinkImg')
+const drinkPicEl = document.getElementById('picture')
 var drink;
 var drinkIns;
 var drinkPic;
