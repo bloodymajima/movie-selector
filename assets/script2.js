@@ -140,7 +140,8 @@ function drinkName() {
 function getDrink(drinkName, instruction, drinkPic) {
   drinkNameEl.textContent = "Drink: " + drinkName
   instructionEl.textContent = instruction
-  drinkPicEl.textContent = drinkPic
+  // drinkPicEl.textContent = drinkPic
+  drinkPicEl.setAttribute("src", drinkPic)
   
 }
 
@@ -194,12 +195,12 @@ function getMovie(movieTitle, poster, movieSummary) {
   movieSummaryEl.textContent = movieSummary
 }
 
-function getDrink(drinkName, instruction, drinkPicEl) {
-  drinkNameEl.textContent = "Drink: " + drinkName
-  instructionEl.textContent = instruction
-  drinkPicEl = urlForDrink.picture
+// function getDrink(drinkName, instruction, drinkPicEl) {
+//   drinkNameEl.textContent = "Drink: " + drinkName
+//   instructionEl.textContent = instruction
+//   drinkPicEl = urlForDrink.picture
 
-}
+// }
 
 // Nav bar link for movie quiz takes you to the start page, genre link takes you to movie genres if thats all you want
 function myFunction() {
