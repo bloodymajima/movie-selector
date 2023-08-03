@@ -51,24 +51,16 @@ function RandomMovie() {
       GetVideo(title)
     })
 }
-var thumbnail;
-const trailerButton = document.querySelector('#trailer');
-// const youtubeAPI = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&key=AIzaSyAsNq2OkSa7Sb9Gdt6PuXlq9TCa5hZ7edI"
+
 function GetVideo(title) {
-const youtubeAPI = `https://youtube.googleapis.com/youtube/v3/search?maxResults=1&part=snippet&type=video&key=AIzaSyAsNq2OkSa7Sb9Gdt6PuXlq9TCa5hZ7edI&q=${title}`
+const youtubeAPI = `https://youtube.googleapis.com/youtube/v3/search?maxResults=1&part=snippet&type=video&key=AIzaSyCunz36RUvUCLw5pQgYTfd2-qjFT3ZqisE&q=${title}`
 fetch(youtubeAPI, {
 }).then((res) => {
   return res.json()
 }).then((data) => {
   console.log(data)
-  // data.items[0].id.videoId
   const id = data.items[0].id.videoId
   player.loadVideoById(id)
-// let video = data.items
-// for(video of videos){
-//   console.log(video.snippet.title)
-// }
-  // link = youtubeAPI + "&q=" + title
 })
 };
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -96,7 +88,6 @@ var drink;
 var drinkIns;
 var drinkPic;
 const drinkDBAPI = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
-console.log(randomNumber);
 function drinkName() {
   fetch(drinkDBAPI, {
   }).then((response) => {
@@ -119,25 +110,10 @@ function drinkName() {
 function getDrink(drinkName, instruction, drinkPic) {
   drinkNameEl.textContent = "Drink: " + drinkName
   instructionEl.textContent = instruction
-  // drinkPicEl.textContent = drinkPic
   drinkPicEl.setAttribute("src", drinkPic)
   
 }
 
-var link;
-// const trailerButton = document.querySelector('#trailer');
-const youtubeAPI = 'https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyBOvpaIhS3xX7TDF0R27uUekzWZDTqzsBw'
-function GetVideo() {
-fetch(youtubeAPI, {
-}).then((res) => {
-  return res.json()
-}).then((data) => {
-  console.log(data)
-  console.log(data.link)
-  
-
-})
-};
 const homePage = document.querySelector('#homepage');
 const movieTitleEl = document.getElementById('movie-title')
 const recomendMovie = document.getElementById('recommendation')
